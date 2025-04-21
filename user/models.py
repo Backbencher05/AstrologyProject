@@ -3,10 +3,12 @@ from utils.enums import *
 
 # Create your models here.
 class UserModel(models.Model):
+    user_name = models.CharField(max_length=20, unique=True)
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
     email = models.EmailField()
     password = models.CharField(max_length=30)
+    password2 = models.CharField(max_length=30)
     mobile_no = models.IntegerField()
     gender = models.CharField(choices=GenderChoices.choices, default=GenderChoices.MALE, max_length=10)
     dob = models.DateTimeField()
