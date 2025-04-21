@@ -16,3 +16,6 @@ class UserModel(models.Model):
     is_customer = models.BooleanField()
     is_astrologer = models.BooleanField()
 
+    def __str__(self):
+        return super().__str__()
+
